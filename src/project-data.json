@@ -2,47 +2,39 @@
   "projects" : [
     {
       "id": "0",
-      "name": "Penteract1"
+      "name": "Penteract",
+      "thumb": "https://s3.amazonaws.com/aws-website-portfolio-z88x3/img/penteract.PNG",
+      "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec leo non justo viverra ultricies. Phasellus vel lorem ac nunc congue scelerisque ac sed nisl. Maecenas eu faucibus erat, eu sagittis quam. Curabitur quis sem rutrum, dapibus tortor vel, ullamcorper quam. Aliquam erat volutpat. Sed efficitur imperdiet nulla, non porta lacus volutpat id. Donec tellus mi, fermentum sed dictum at, eleifend et mauris. Pellentesque porta nulla ut posuere sodales. Ut velit erat, pulvinar sagittis mi eu, dignissim rhoncus odio. Nam vestibulum purus et metus sodales, sit amet hendrerit nulla condimentum. Etiam porttitor metus leo, eget ullamcorper eros bibendum id. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce a scelerisque justo."
     },
 
     {
       "id": "1",
-      "name": "Penteract2"
+      "name": "Todo Web App",
+      "thumb": "https://s3.amazonaws.com/aws-website-portfolio-z88x3/img/wp-theme.PNG"
     },
 
     {
       "id": "2",
-      "name": "Penteract3"
+      "name": "Photo Sharing Site",
+      "thumb": "https://s3.amazonaws.com/aws-website-portfolio-z88x3/img/todo.PNG"
     },
 
     {
       "id": "3",
-      "name": "Penteract4"
+      "name": "Penteract4",
+      "thumb": "https://s3.amazonaws.com/aws-website-portfolio-z88x3/img/validation.PNG"
     },
 
     {
       "id": "4",
-      "name": "Penteract5"
+      "name": "Penteract5",
+      "thumb": "https://s3.amazonaws.com/aws-website-portfolio-z88x3/img/photo-sharing.PNG"
     },
 
     {
       "id": "5",
-      "name": "Penteract6"
-    },
-
-    {
-      "id": "6",
-      "name": "Penteract7"
-    },
-
-    {
-      "id": "7",
-      "name": "Penteract8"
-    },
-
-    {
-      "id": "8",
-      "name": "Penteract9"
+      "name": "Penteract6",
+      "thumb": "https://s3.amazonaws.com/aws-website-portfolio-z88x3/img/data-persistence.PNG"
     }
   ]
 }

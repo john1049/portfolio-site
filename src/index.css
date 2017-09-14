@@ -61,7 +61,7 @@ body{
   position:relative;
   top:-20px;
   transition: opacity .25s, visibility .25s;
-  color:#61DAFB;
+  color:#47C0B7;
 }
 
 .sidebar a:hover i{
@@ -92,75 +92,98 @@ h2{
 .content-container{
   background: #3e3e3e;
   margin-left: 75px;
-  height: calc(100vh + 20px);
-  margin-top: -20px;
+  height: calc(100vh);
 }
 
 .projects-container{
-  padding-top: 70px;
+  padding-top: 10px;
 }
 
 .project{
   display: inline-block;
-  width:calc(100%/3);
-  height:25vw;
+  width:calc(90%/3);
+  height:20vw;
   float: left;
-  background: red;
-  margin-top: -4px;
-}
-
-.project:nth-child(2n){
-  background: blue;
-}
-
-.overlay{
-  position: relative;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:#000000;
-  opacity:0;
   text-align: center;
+  margin: 25px 30px;
 }
 
-.overlay p{
-  display: inline;
+.project-name {
   position: relative;
-  top: 45%;
-  color: white;
-  opacity: 1;
-  font-size: 18px;
+  top:10px;
+  width: 100%;
+  height: 20px;
+  background:#232323;
+  color:#47C0B7;
+  padding-top: 5px;
+  margin-top: 0;
+  cursor: pointer;
 }
 
-.overlay:hover{
+.project-thumb{
+  display: block;
+  position: relative;
+  top: -18px;
+}
+
+.see-project{
+  display:inline;
+  color: #FFFFFF;
+  z-index: 10;
+  position: relative;
+  top:calc(16vw/2);
+  top: 200px;
+  background: transparent;
+  opacity: 0;
+  padding:10px;
+  border-radius: 5px;
+  border: 2px solid #47C0B7;
+}
+
+.project:hover .project-thumb{
   opacity: 0.4;
-  transition: opacity .25s;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+
+.project:hover .see-project{
+  opacity: 1;
+  top:calc(18vw/2);
+  transition: top 0.5s, opacity 0.75s;
+  cursor: pointer;
 }
 
 .project-detail-container{
+  display: block;
   position: absolute;
   top: 0;
-  right: 0px;
-  background-color: #3e3e3e;
-  width: 80%;
+  right: -50%;
+  background-color: #232323;
+  width: 50%;
   height: 100vh;
-  z-index: 2;
+  z-index: 20;
+  transition: right 0.5s;
 }
 
 .projects-overlay{
+  display: block;
+  visibility: hidden;
   position: absolute;
   left: 75px;
   top: 0;
-  width:1000px;
+  width:100vw;
   height: 100vh;
   background-color: black;
-  opacity: 0.4;
+  opacity: 0;
+  z-index:15;
+  transition: opacity 0.5s;
+  cursor: pointer;
 }
 
 .project-detail-container h2{
-  color: #FFFFFF;
-  left: 10px;
+  color: #47C0B7;
+  left: 20px;
+  padding-top: 15px;
 }
 
 .project-detail-container .projects-container{
@@ -169,26 +192,93 @@ h2{
   margin-left: 15px;
 }
 
-.back-button{
+.close{
   position: relative;
-  left: -40px;
+  right: -95%;
+  top: 25px;
   width: 40px;
   height: 80px;
-  background: #3e3e3e;
-  border-top-left-radius: 7px;
-  border-bottom-left-radius: 7px;
-  text-align: center;
-
+  font-size: 30px !important;
+  color: #47C0B7;
+  z-index: 40;
 }
 
-.back-button .icon{
-  margin-top:30px;
-  font-size: 20px;
+.project-image{
+  width:60%;
+  margin: 5px 20%;
 }
 
-@media screen and (max-width:500px){
+.project-info{
+  color: #FFFFFF;
+  margin: 20px;
+}
+
+.visible{
+  display: block !important;
+  right:0;
+  transition: right 0.5s;
+}
+
+.overlay-visible{
+  visibility: visible;
+  opacity: 0.4;
+  transition: opacity 0.5s;
+}
+
+/* Clearfix */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+@media screen and (max-width:1274px){
   .project{
-    width:50%;
-    height:33vw;
+    width:calc(90%/2);
+    height:30vw;
+  }
+
+  .see-project{
+    top:calc(28vw/2);
+  }
+}
+
+@media screen and (max-width:892px){
+  .content-container{
+    height: 100%;
+  }
+
+  .project{
+    width:90%;
+    height:60vw;
+    margin-top: 30px;
+  }
+
+  .see-project{
+    top:calc(58vw/2);
+  }
+
+  .project-detail-container{
+    width:calc(100vw - 75px);
+  }
+
+  .project-image{
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .projects-overlay{
+    height: 100%;
+  }
+
+  .close{
+    top:20px;
+    right:-90%;
   }
 }
