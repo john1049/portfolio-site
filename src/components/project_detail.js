@@ -1,22 +1,18 @@
 import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
 
-const ProjectDetail = (props) => {
-
-    const projectNum = props.match.params.id;
+const ProjectDetail = ({project, hideDetail, isVisible}) => {
 
     return(
       <div>
-        <div className="project-detail-container">
-          <NavLink to="/projects" ><div className="back-button"><i className="icon fa fa-chevron-right"></i></div></NavLink>
-            <h2 className="page-name">{props.data.projects[projectNum].name}</h2>
-            <div className="projects-container">
-              This is project info
-            </div>
+        <div className={isVisible ? 'visible project-detail-container' : 'project-detail-container'}>
+          <a onClick={() => hideDetail(false)}><i className="close icon fa fa-close"></i></a>
+            <h2 className="page-name">{project.name}</h2>
+            <a href="http://profchris.com/ssmpari/selector/" target="blank"><img className="project-image"  width="90%"/></a>
+            <div className="project-info"></div>
           </div>
-        <NavLink to="/projects" ><div className="projects-overlay"></div></NavLink>
+        <div className={isVisible ? 'projects-overlay overlay-visible' : 'projects-overlay'} onClick={() => hideDetail(false)}></div>
       </div>
-    );
-  }
-
+      );
+}
 export default ProjectDetail;
